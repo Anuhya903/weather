@@ -1,0 +1,26 @@
+:root{ --bg:#f7f9fc; --card:#ffffff; --accent:#2b7cff; --muted:#666 }
+*{box-sizing:border-box;font-family:Segoe UI,Arial,Helvetica,sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.container{max-width:900px;margin:28px auto;padding:18px}
+h1{margin:0 0 12px}
+.controls{display:flex;gap:8px;margin-bottom:10px}
+.controls input{flex:1;padding:8px;border-radius:6px;border:1px solid #ddd}
+.controls button{padding:8px 12px;border-radius:6px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.status{margin:8px 0;color:var(--muted)}
+.status.error{color:#b00020}
+.dashboard.hidden{display:none}
+.row{display:flex;gap:12px;margin-top:12px}
+.card{flex:1;background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.card.wide{flex:2}
+.label{font-size:12px;color:var(--muted)}
+.value{font-size:20px;margin-top:6px}
+
+/* Forecast */
+.forecast-section{margin-top:20px;background:var(--card);padding:12px;border-radius:8px}
+.forecast-cards{display:flex;gap:10px;margin-top:12px;overflow-x:auto}
+.forecast-card{min-width:120px;background:linear-gradient(180deg,#fff,#f7f9ff);padding:8px;border-radius:8px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.fc-icon img{width:64px;height:64px}
+.fc-date{font-weight:600}
+.fc-desc{font-size:12px;color:var(--muted);margin-top:6px}
+.fc-temps{margin-top:6px;font-weight:600}
+

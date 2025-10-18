@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Dashboard</h1>
+
+      <div class="controls">
+        <input id="city-input" placeholder="Enter city name (e.g., London)" />
+        <button id="search-btn">Search</button>
+        <button id="geo-btn">Use My Location</button>
+      </div>
+
+      <div id="status" class="status"></div>
+
+      <div id="dashboard" class="dashboard hidden">
+        <h2 id="loc-name"></h2>
+        <div class="row">
+          <div class="card">
+            <div class="label">Temperature</div>
+            <div id="temp" class="value"></div>
+          </div>
+          <div class="card">
+            <div class="label">Condition</div>
+            <div id="condition" class="value"></div>
+          </div>
+          <div class="card">
+            <div class="label">Humidity</div>
+            <div id="humidity" class="value"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card wide">
+            <div class="label">Wind</div>
+            <div id="wind" class="value"></div>
+          </div>
+          <div class="card wide">
+            <div class="label">Coordinates</div>
+            <div id="coord" class="value"></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="forecast-section" class="forecast-section hidden">
+        <h2>5-Day Forecast</h2>
+        <canvas id="forecast-chart" height="140"></canvas>
+        <div id="forecast-cards" class="forecast-cards"></div>
+      </section>
+    </div>
+
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/main.js"></script>
+  </body>
+</html>
